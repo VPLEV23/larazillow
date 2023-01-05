@@ -16,7 +16,9 @@ return new class extends Migration
         Schema::create('listing_images', function (Blueprint $table) {
             $table->id();
             $table->timestamps();
+
             $table->string('filename');
+
             $table->foreignIdFor(
                 \App\Models\Listing::class
             )->constrained('listings');
